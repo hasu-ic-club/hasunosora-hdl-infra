@@ -1,0 +1,22 @@
+CAPI=2:
+name: hasunosora:cdc:syncer_gray:0.1a0
+description: Gray-encoded multi-bit synchronizer
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:arith:binary_gray_cvt:0.1a0"
+      - ">=hasunosora:cdc:syncer_mb:0.1a0"
+    files:
+      - rtl/cdc/hs_cdc_syncer_gray.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+  synth:
+    <<: *default
+    default_tool: vivado
+    toplevel: hs_cdc_syncer_gray

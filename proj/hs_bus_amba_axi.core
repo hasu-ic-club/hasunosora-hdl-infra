@@ -1,0 +1,23 @@
+CAPI=2:
+name: hasunosora:bus:amba_axi:0.1a0
+description: Standard ARM AMBA AXI5-Full Interface
+
+filesets:
+  pkg:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - pkg/hs_bus_amba_axi_typedefs_pkg.sv
+    file_type: systemVerilogSource
+  if:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - if/hs_bus_amba_axi_if.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - pkg
+      - if

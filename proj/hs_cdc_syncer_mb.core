@@ -1,0 +1,21 @@
+CAPI=2:
+name: hasunosora:cdc:syncer_mb:0.1a0
+description: Multi-bit multi-stage asynchronous synchronizer
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:cdc:syncer:0.1a0"
+    files:
+      - "hs_cdc_syncer_mb.sv"
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+  synth:
+    <<: *default
+    default_tool: vivado
+    toplevel: hs_cdc_syncer_mb

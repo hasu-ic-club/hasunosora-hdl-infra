@@ -1,0 +1,18 @@
+CAPI=2:
+name: hasunosora:dpath:ce_chain:0.1a0
+description: Paramaterized shift register (SFR) for CE chain
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:dpath:sfr_ce_tap:0.1a0"
+    files:
+      - rtl/datapath/hs_dpath_ce_chain.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

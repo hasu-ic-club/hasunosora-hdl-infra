@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<waivers version="7">
+    <waiver apply-on="matched" name="Allow System Math Functions">
+        <status>DISABLE</status>
+        <description>Allow system functions for convenience design</description>
+        <check>SVTB.29.1.2</check>
+    </waiver>
+    <waiver apply-on="matched" name="Disable Unused Module Detecting">
+        <status>DISABLE</status>
+        <description>Disable unused module error while editing the infrastructure library</description>
+        <check>SVTB.31.1.0</check>
+    </waiver>
+    <waiver apply-on="matched" name="Disable Port Direction Suffix Requirement">
+        <status>DISABLE</status>
+        <description>Disable port direction suffix (_i/_o/_io) in morden System Verilog RTL design.</description>
+        <check>R.1144</check>
+    </waiver>
+</waivers>

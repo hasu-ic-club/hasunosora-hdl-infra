@@ -1,0 +1,25 @@
+CAPI=2:
+name: hasunosora:bus:amba_axis:0.1a0
+description: Standard ARM AMBA AXI4-Stream Interface
+
+filesets:
+  if:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - if/hs_bus_amba_axis_if.sv
+    file_type: systemVerilogSource
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - rtl/interface/hs_bus_amba_axis_wire_to_masterif.sv
+      - rtl/interface/hs_bus_amba_axis_wire_to_slaveif.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - if
+      - rtl
+

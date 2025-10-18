@@ -1,0 +1,31 @@
+CAPI=2:
+name: hasunosora:bus:amba_axilite:0.1a0
+description: Standard ARM AMBA AXI5-Lite Interface
+
+filesets:
+  pkg:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - pkg/hs_bus_amba_axi_typedefs_pkg.sv
+    file_type: systemVerilogSource
+  if:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - if/hs_bus_amba_axilite_if.sv
+    file_type: systemVerilogSource
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - rtl/interface/hs_bus_amba_axilite_wire_to_masterif.sv
+      - rtl/interface/hs_bus_amba_axilite_wire_to_slaveif.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - pkg
+      - if
+      - rtl

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE waivers PUBLIC "-//DVT//waivers" "waivers.dtd" >
+<waivers version="1">
+    <waiver name="Disable by message" severity="DISABLED">
+        <description>This waiver disables all problems containing 'JUST_A_FOO_PROBLEM' inside their message.</description>
+        <match message="*JUST_A_FOO_PROBLEM*"/>
+    </waiver>
+    <waiver name="Demote by path" severity="WARNING">
+        <description>This waiver turns into warnings all problems reported under '/path/to/foo'.</description>
+        <match path="/path/to/foo/*"/>
+    </waiver>
+    <waiver name="Promote by path OR message" severity="ERROR">
+        <description>This waiver turns into errors all problems that contain 'JUST_A_FOO_PROBLEM' inside their message OR were reported under '/path/to/foo'.</description>
+        <match message="*JUST_A_FOO_PROBLEM*"/>
+        <match path="/path/to/foo/*"/>
+    </waiver>
+    <waiver name="Disable by path AND message" severity="DISABLED">
+        <description>This waiver disables all problems that contain 'JUST_A_FOO_PROBLEM' inside their message AND were reported under '/path/to/foo'.</description>
+        <match message="*JUST_A_FOO_PROBLEM*" path="/path/to/foo/*"/>
+    </waiver>
+	<waiver name="Disable UNELABORATED_MODULE" severity="DISABLED">
+		<description>Disable unelaborated module warning while editing the infrastructures modules.
+		</description>
+	</waiver>
+</waivers>

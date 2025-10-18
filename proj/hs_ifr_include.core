@@ -1,0 +1,15 @@
+CAPI=2:
+name: hasunosora:infra:include:0.1a0
+description: Global headers for Hasunosora RTL infrastructure
+
+filesets:
+  include:
+    files:
+      - include/hs_ifr_global.svh:
+          is_include_file: true
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - include

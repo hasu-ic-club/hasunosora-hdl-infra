@@ -1,0 +1,25 @@
+# Xcelium result path
+xrun
+
+# Metadata
+.metadata
+
+# Log files
+*.log
+*.jou
+*.html
+
+# Backup files
+*.bak
+
+# DVT files
+*/.dvt/*.ls
+*/.dvt/*.auto.*
+dvt_cli_socket
+.build_config_dict
+.project
+*/.dvt/.*
+*/.dvt/*templates.xml
+
+# FuseSoC build files
+build

@@ -1,0 +1,18 @@
+CAPI=2:
+name: hasunosora:arith:binary_gray_cvt:0.1a0
+description: Combinational binary-Gray converter (forward/reverse)
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - rtl/arithmetic/hs_arith_binary_gray_cvt.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

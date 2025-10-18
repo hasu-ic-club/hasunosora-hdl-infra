@@ -1,0 +1,19 @@
+CAPI=2:
+name: hasunosora:mem:tdpram:0.1a0
+description: True dual-port RAM (2WR) w/ Latency = 1 or 2
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:math:basic_pkg:0.1a0"
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - rtt/memory/hs_mem_tdpram.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

@@ -1,0 +1,30 @@
+CAPI=2:
+name: hasunosora:cdc:syncer:0.1a0
+description: Multi-stage asynchronous synchronizer (1-bit)
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - rtl/cdc/hs_cdc_syncer.sv
+    file_type: systemVerilogSource
+  xdc:
+    files:
+      - constraint/xilinx/cdc/hs_cdc_syncer.xdc
+    file_type: xdc
+  xtcl:
+    files:
+      - script/xilinx/cdc/hs_cdc_syncer_xilinx.tcl
+    file_type: tclSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+      - "tool_vivado ? (xdc)"
+      - "tool_vivado ? (xtcl)"
+  synth:
+    <<: *default
+    default_tool: vivado
+    toplevel: hs_cdc_syncer

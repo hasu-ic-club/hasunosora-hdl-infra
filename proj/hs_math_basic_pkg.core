@@ -1,0 +1,14 @@
+CAPI=2:
+name: hasunosora:math:basic_pkg:0.1a0
+description: Basic math functions package
+
+filesets:
+  pkg:
+    files:
+      - pkg/hs_math_basic_pkg.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - pkg

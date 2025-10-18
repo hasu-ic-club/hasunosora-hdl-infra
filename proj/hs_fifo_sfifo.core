@@ -1,0 +1,95 @@
+CAPI=2:
+name: hasunosora:fifo:sfifo:0.1a0
+description: Parameterized Synchronous FIFO
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+      - ">=hasunosora:dpath:skid_buffer:0.1a0"
+      - ">=hasunosora:unit:dff:0.1a0"
+      - ">=hasunosora:unit:dff_ce:0.1a0"
+      - ">=hasunosora:dpath:sfr:0.1a0"
+      - ">=hasunosora:mem:sdpram:0.1a0"
+    files:
+      - rtl/fifo/hs_fifo_sfifo.sv
+    file_type: systemVerilogSource
+  pkg:
+    depend:
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - tb/fifo/hs_fifo_sfifo/pkg/hs_fifo_sfifo_uvm_param_pkg.sv
+    file_type: systemVerilogSource
+  test_if:
+    depend:
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - tb/fifo/hs_fifo_sfifo/if/hs_fifo_sfifo_duv_if.sv
+    file_type: systemVerilogSource
+  uvm:
+    depend:
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - tb/fifo/hs_fifo_sfifo/seqitem/hs_fifo_sfifo_uvm_seqitem_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/sequence/hs_fifo_sfifo_uvm_seq_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/sequencer/hs_fifo_sfifo_uvm_seqer_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/rm/hs_fifo_sfifo_uvm_rm_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/driver/hs_fifo_sfifo_uvm_drv_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/monitor/hs_fifo_sfifo_uvm_mon_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/agent/hs_fifo_sfifo_uvm_agent_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/scoreboard/hs_fifo_sfifo_uvm_scb_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/env/hs_fifo_sfifo_uvm_env_pkg.sv
+      - tb/fifo/hs_fifo_sfifo/test/hs_fifo_sfifo_uvm_test_pkg.sv
+    file_type: systemVerilogSource
+  sva:
+    depend:
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - tb/fifo/hs_fifo_sfifo/sva/hs_fifo_sfifo_sva.sv
+    file_type: systemVerilogSource
+  tb:
+    depend:
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+    files:
+      - tb/fifo/hs_fifo_sfifo/hs_fifo_sfifo_tb.sv
+    file_type: systemVerilogSource
+  simscripts:
+    files:
+      - tb/fifo/hs_fifo_sfifo/scripts/xrun.tcl
+    file_type: tclSource
+targets:
+  default: &default
+    filesets:
+      - rtl
+  sim:
+    <<: *default
+    description: Verification of this IP
+    filesets_append:
+      - pkg
+      - test_if
+      - uvm
+      - sva
+      - tb
+      - simscripts
+    toplevel: hs_fifo_sfifo_tb
+    default_tool: xcelium
+    tools:
+      xcelium:
+        xrun_options:
+          - -64bit
+          - -sv
+          - -access +rwc -accessreg +rwc
+          - -debug -classlinedebug -linedebug -source_debug -plidebug -fsmdebug
+          - -ml_uvm -uvmlinedebug -uvmaccess
+          - -persistent_sources_debug
+          - +UVM_VERBOSITY=UVM_MEDIUM +UVM_CASELIMIT=100
+          - +define+USE_DEFAULT_NETTYPE_WIRE
+          - -date -dumpstack -negdelay
+          - -lwdgen
+          - -delay_mode zero
+          - -sequdp_nba_delay
+          - -timescale 1ns/1ps
+          
+
+

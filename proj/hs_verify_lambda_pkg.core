@@ -1,0 +1,14 @@
+CAPI=2:
+name: hasunosora:verify:lambda_pkg:0.1a0
+description: Lambda function classes for verification
+
+filesets:
+  pkg:
+    files:
+      - pkg/hs_verify_lambda_pkg.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - pkg

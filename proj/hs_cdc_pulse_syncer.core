@@ -1,0 +1,25 @@
+CAPI=2:
+name: hasunosora:cdc:pulse_syncer:0.1a0
+description: Robust clock domain cross synchronizer for pulse signals
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:infra:typedefs_pkg:0.1a0"
+      - ">=hasunosora:unit:dff:0.1a0"
+      - ">=hasunosora:unit:dff_ce:0.1a0"
+      - ">=hasunosora:unit:dff_ce_sclr:0.1a0"
+      - ">=hasunosora:cdc:syncer:0.1a0"
+    files:
+      - rtl/cdc/hs_cdc_pulse_syncer.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+  synth:
+    <<: *default
+    default_tool: vivado
+    toplevel: hs_cdc_pulse_syncer

@@ -1,0 +1,15 @@
+CAPI=2:
+name: hasunosora:infra:typedefs_pkg:0.1a0
+description: Type definition packages for Hasunosora RTL infrastructure
+
+filesets:
+  pkg:
+    files:
+      - pkg/hs_ifr_int_typedefs_pkg.sv
+      - pkg/hs_ifr_misc_typedefs_pkg.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - pkg

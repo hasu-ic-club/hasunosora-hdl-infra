@@ -1,0 +1,18 @@
+CAPI=2:
+name: hasunosora:mem:spram:0.1a0
+description: Single-port RAM (1WR) w/ Latency = 1
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:math:basic_pkg:0.1a0"
+    files:
+      - rtl/memory/hs_mem_sdpram.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

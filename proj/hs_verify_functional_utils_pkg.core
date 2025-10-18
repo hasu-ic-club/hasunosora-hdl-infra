@@ -1,0 +1,16 @@
+CAPI=2:
+name: hasunosora:verify:functional_utils_pkg:0.1a0
+description: Functional utils for verification
+
+filesets:
+  pkg:
+    depend:
+      - ">=hasunosora:verify:lambda_pkg:0.1a0"
+    files:
+      - pkg/hs_verify_functional_utils_pkg.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - pkg

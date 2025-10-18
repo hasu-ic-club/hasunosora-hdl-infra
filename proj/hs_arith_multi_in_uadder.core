@@ -1,0 +1,17 @@
+CAPI=2:
+name: hasunosora:arith:multi_in_uadder:0.1a0
+description: Multiple input unsigned adder
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - rtl/arithmetic/hs_arith_multi_in_uadder.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

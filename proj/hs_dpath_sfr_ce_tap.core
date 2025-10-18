@@ -1,0 +1,17 @@
+CAPI=2:
+name: hasunosora:dpath:sfr_ce_tap:0.1a0
+description: Paramaterized shift register (SFR) w/ Tapped Clock Enable and Tapped Out
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+    files:
+      - rtl/datapath/hs_dpath_sfr_ce_tap.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+

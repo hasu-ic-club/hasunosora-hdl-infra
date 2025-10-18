@@ -1,0 +1,6 @@
++dvt_init+xcelium.xrun -uvm
+pkg/*.sv
+if/*.sv
+rtl/**/*.sv
+tb/**/*.sv
++incdir+include

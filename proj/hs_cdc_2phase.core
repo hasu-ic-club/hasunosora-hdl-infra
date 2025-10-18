@@ -1,0 +1,32 @@
+CAPI=2:
+name: hasunosora:cdc:2phase:0.1a0
+description: 2-Phase clock domain cross for multi-bit data
+
+filesets:
+  rtl:
+    depend:
+      - ">=hasunosora:infra:include:0.1a0"
+      - ">=hasunosora:cdc:syncer:0.1a0"
+      - ">=hasunosora:unit:dff:0.1a0"
+    files:
+      - rtl/cdc/hs_cdc_2phase.sv
+    file_type: systemVerilogSource
+  xdc:
+    files:
+      - constraint/xilinx/cdc/hs_cdc_2phase.xdc
+    file_type: xdc
+  xtcl:
+    files:
+      - script/xilinx/cdc/hs_cdc_2phase_xilinx.tcl
+    file_type: tclSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+      - "tool_vivado ? (xdc)"
+      - "tool_vivado ? (xtcl)"
+  synth:
+    <<: *default
+    toplevel: hs_cdc_2phase
+    default_tool: vivado
