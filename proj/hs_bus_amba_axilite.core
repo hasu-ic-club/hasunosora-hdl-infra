@@ -19,8 +19,8 @@ filesets:
     depend:
       - ">=hasunosora:infra:include:0.1a0"
     files:
-      - rtl/interface/hs_bus_amba_axilite_wire_to_masterif.sv
-      - rtl/interface/hs_bus_amba_axilite_wire_to_slaveif.sv
+      - rtl/interface/hs_bus_amba_axilite_w2mif.sv
+      - rtl/interface/hs_bus_amba_axilite_w2sif.sv
     file_type: systemVerilogSource
 
 targets:
