@@ -40,7 +40,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Get the value and index of minimum (unsigned) item from multiple inputs
 module hs_arith_multi_in_uminimize

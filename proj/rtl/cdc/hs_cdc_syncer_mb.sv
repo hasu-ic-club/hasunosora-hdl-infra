@@ -46,7 +46,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Multi-bit multi-stage asynchronous synchronizer
 module hs_cdc_syncer_mb

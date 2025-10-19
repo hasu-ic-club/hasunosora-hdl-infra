@@ -42,7 +42,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // True dual-port RAM (2WR) w/ Latency = 1 or 2
 module hs_mem_tdpram

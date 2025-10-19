@@ -40,7 +40,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Paramaterized D-flip flop register (DFF) w/o Reset but w/ CE
 module hs_unit_dff_noreset_ce

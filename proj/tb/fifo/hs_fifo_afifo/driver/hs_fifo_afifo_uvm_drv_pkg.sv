@@ -35,7 +35,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Package of driver definition for UVM framework of hs_fifo_afifo
 package hs_fifo_afifo_uvm_drv_pkg;

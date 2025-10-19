@@ -43,7 +43,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // 2-Phase clock domain cross for multi-bit data with handshake control
 module hs_cdc_2phase_handshake

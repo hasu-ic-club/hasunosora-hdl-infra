@@ -39,7 +39,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Package of sequence item definition for UVM framework of hs_fifo_sfifo
 package hs_fifo_sfifo_uvm_seqitem_pkg;

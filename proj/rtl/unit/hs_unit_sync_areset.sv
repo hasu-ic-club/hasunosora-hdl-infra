@@ -40,7 +40,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Synchronized Asynchronous Reset (Asynchronous Reset w/ Synchronized Release)
 module hs_unit_sync_areset

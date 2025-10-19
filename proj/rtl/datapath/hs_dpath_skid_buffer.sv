@@ -51,7 +51,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Skid buffer with standard handshake interface
 module hs_dpath_skid_buffer

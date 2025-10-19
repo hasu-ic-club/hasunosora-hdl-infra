@@ -42,7 +42,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Paramaterized D-flip flop register (DFF) w/ Clock Enable and Sync. Clear
 module hs_unit_dff_ce_sclr

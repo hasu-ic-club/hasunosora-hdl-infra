@@ -41,7 +41,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Combinational binary-Gray converter (forward/reverse)
 module hs_arith_binary_gray_cvt

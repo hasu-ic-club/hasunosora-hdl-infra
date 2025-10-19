@@ -35,7 +35,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 package hs_fifo_afifo_uvm_mon_pkg;
     import uvm_pkg::*;

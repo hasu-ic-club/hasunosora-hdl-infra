@@ -40,7 +40,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Interface for design under verification unit hs_fifo_afifo
 interface hs_fifo_afifo_duv_if

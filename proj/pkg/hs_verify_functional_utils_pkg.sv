@@ -39,7 +39,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Functional utils for verification
 package hs_verify_functional_utils_pkg;

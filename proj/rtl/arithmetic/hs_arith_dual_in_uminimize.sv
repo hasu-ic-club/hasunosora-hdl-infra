@@ -43,7 +43,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Get the value and index of minimum (unsigned) item from 2 inputs
 module hs_arith_dual_in_uminimize

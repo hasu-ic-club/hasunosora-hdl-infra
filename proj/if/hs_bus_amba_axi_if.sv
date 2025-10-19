@@ -47,7 +47,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Standard ARM AMBA AXI5-Full interface
 interface hs_bus_amba_axi_if

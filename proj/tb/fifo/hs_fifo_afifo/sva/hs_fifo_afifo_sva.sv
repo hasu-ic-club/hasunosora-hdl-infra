@@ -53,7 +53,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // System Verilog Assertion (SVA) mirror for module hs_fifo_afifo
 module hs_fifo_afifo_sva

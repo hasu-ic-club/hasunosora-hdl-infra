@@ -41,7 +41,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Synchronized Edge Detector
 module hs_unit_sedge_det

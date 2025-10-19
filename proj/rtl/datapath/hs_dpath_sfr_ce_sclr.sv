@@ -45,7 +45,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Paramaterized shift register (SFR) w/ Clock Enable and Sync. Clear
 module hs_dpath_sfr_ce_sclr

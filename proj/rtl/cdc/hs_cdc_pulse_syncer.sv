@@ -44,7 +44,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Robust clock domain cross synchronizer for pulse signals
 module hs_cdc_pulse_syncer

@@ -43,7 +43,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Pipelined multiple input unsigned adder
 module hs_arith_multi_in_uadder_pipe

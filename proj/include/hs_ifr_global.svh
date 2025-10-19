@@ -48,9 +48,9 @@
 // for "default_nettype" should it consider turning on this switch for compilation.
 // `define USE_DEFAULT_NETTYPE_WIRE
 `ifdef USE_DEFAULT_NETTYPE_WIRE
-`define DEFAULT_NETTYPE wire
+`define DEFAULT_NETTYPE `default_nettype wire
 `else // USE_DEFAULT_NETTYPE_WIRE
-`define DEFAULT_NETTYPE none
+`define DEFAULT_NETTYPE `default_nettype none
 `endif // USE_DEFAULT_NETTYPE_NONE
 
 // These marco is for some compilers does not supported implicited generate 

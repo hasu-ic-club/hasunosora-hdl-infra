@@ -41,7 +41,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Simple dual-port RAM (1W/1R) w/ Latency = 1
 module hs_mem_sdpram

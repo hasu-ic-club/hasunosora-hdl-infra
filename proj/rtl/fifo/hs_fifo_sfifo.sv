@@ -59,7 +59,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Parameterized Synchronous FIFO
 module hs_fifo_sfifo

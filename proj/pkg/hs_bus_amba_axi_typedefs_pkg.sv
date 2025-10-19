@@ -39,7 +39,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Package for type definitions of ARM AMBA AXI interfaces
 package hs_bus_amba_axi_typedefs_pkg;

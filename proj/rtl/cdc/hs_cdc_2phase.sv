@@ -42,7 +42,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // 2-Phase clock domain cross for multi-bit data
 module hs_cdc_2phase

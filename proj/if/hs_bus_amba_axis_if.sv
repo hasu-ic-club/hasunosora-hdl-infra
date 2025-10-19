@@ -42,7 +42,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Standard ARM AMBA AXI-Stream interface
 interface hs_bus_amba_axis_if

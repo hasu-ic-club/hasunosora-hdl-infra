@@ -39,7 +39,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Package for misc type definitions
 package hs_ifr_misc_typedefs_pkg;

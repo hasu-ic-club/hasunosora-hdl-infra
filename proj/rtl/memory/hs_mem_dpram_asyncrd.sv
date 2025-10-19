@@ -41,7 +41,7 @@
 
 `include "hs_ifr_global.svh"
 
-`default_nettype `DEFAULT_NETTYPE
+`DEFAULT_NETTYPE
 
 // Dual-port RAM (1W/2R) w/ Latency = 0 (Asynchronous Read)
 module hs_mem_dpram_asyncrd
