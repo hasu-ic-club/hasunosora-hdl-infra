@@ -1,5 +1,5 @@
 CAPI=2:
-name: hasunosora:cdc:2phase_handshake:0.1a0
+name: hasunosora:cdc:2phase_handshake:0.1a1
 description: 2-Phase clock domain cross for multi-bit data with handshake control
 
 filesets:

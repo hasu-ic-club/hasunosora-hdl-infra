@@ -22,12 +22,14 @@
 # AUTHOR:    Onodera Tsusaki
 # EMAIL:     apertureelectronic@outlook.com
 #-------------------------------------------------------------------------
-# RELEASE VERSION: 0.1a0
+# RELEASE VERSION: 0.1a1
 # VERSION DESCRIPTION: First Edition
 #-------------------------------------------------------------------------
 # RELEASES:
 # VERSION    AUTHOR        RELEASE DATE  DESCRIPTION
 # 0.1a0      O. Tsusaki    2025/9/25     First Edition
+# 0.1a1      O. Tsusaki    2025/10/22    Add processing order setting to 
+#                                        solve clock creation issue
 #-------------------------------------------------------------------------
 # PURPOSE: Xilinx script for 2-phase clock domain cross for multi-bit data
 #
@@ -36,4 +38,7 @@
 set xdc_file [lindex [get_files *hs_cdc_2phase.xdc] 0]
 if { $xdc_file ne "" } {
     set_property SCOPED_TO_REF hs_cdc_2phase [get_files $xdc_file]
+
+    # Set the processing order to LATE to ensure the clock has been created
+    set_property PROCESSING_ORDER LATE [get_files $xdc_file]
 }
