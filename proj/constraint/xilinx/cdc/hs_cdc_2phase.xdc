@@ -22,7 +22,7 @@
 # AUTHOR:    Onodera Tsusaki
 # EMAIL:     apertureelectronic@outlook.com
 #-------------------------------------------------------------------------
-# RELEASE VERSION: 0.1a1
+# RELEASE VERSION: 0.1a2
 # VERSION DESCRIPTION: First Edition
 #-------------------------------------------------------------------------
 # RELEASES:
@@ -30,14 +30,16 @@
 # 0.1a0      O. Tsusaki    2025/9/25     First Edition
 # 0.1a1      O. Tsusaki    2025/10/22    Remove -hier option from get_ports.
 #                                        It's a mistake.
+# 0.1a2      O. Tsusaki    2025/10/22    Replace -regexp with -filter in 
+#                                        get_ports for more robust matching.
 #-------------------------------------------------------------------------
 # PURPOSE: Xilinx constraint for 2-phase clock domain cross for multi-bit data
 #
 #-FHDR--------------------------------------------------------------------
 
 # Get the clock
-set src_clk [get_clocks -quiet -of [get_ports -regexp {^.*src_clk$}]]
-set dst_clk [get_clocks -quiet -of [get_ports -regexp {^.*dst_clk$}]]
+set src_clk [get_clocks -quiet -of [get_ports -filter {NAME =~ *src_clk}]]
+set dst_clk [get_clocks -quiet -of [get_ports -filter {NAME =~ *dst_clk}]]
 
 # Get period of the clock
 set src_clk_period [get_property PERIOD $src_clk]
